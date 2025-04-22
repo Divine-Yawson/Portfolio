@@ -14,23 +14,34 @@
     }
 
     .header {
-      background-color: #1a1a2e;
-      color: #ffffff;
-      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+      padding: 100px 20px;
       text-align: center;
+      color: #ffffff;
       border-bottom: 5px solid #e94560;
+      background-color: #0a0a2e;
     }
 
-    .header h1 {
-      margin: 0;
-      font-size: 3em;
-      font-weight: 600;
+    .header::before {
+      content: "";
+      background-image: url('https://s3-levelz-bucket.s3.amazonaws.com/devops-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      filter: blur(6px) brightness(0.5);
+      transform: scale(1.05);
     }
 
+    .header h1,
     .header p {
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #f9f9f9;
+      position: relative;
+      z-index: 2;
     }
 
     .container {
@@ -85,7 +96,7 @@
 <body>
   <div class="header">
     <h1>Divine Yawson</h1>
-    <p>DevOps Engineer |AWS Cloud | Networking |CI/CD | Automation</p>
+    <p>DevOps Engineer | AWS Cloud | Networking | CI/CD | Automation</p>
   </div>
 
   <div class="container">
@@ -94,7 +105,7 @@
 
     <h2>Skills</h2>
     <ul>
-      <li>Networking(Routing & Switching)</li>
+      <li>Networking (Routing & Switching)</li>
       <li>Docker & Kubernetes</li>
       <li>AWS</li>
       <li>Terraform & CloudFormation</li>
@@ -104,19 +115,16 @@
     <h2>Certifications</h2>
     <ul>
       <li>AWS Certified Solutions Architect</li>
-      <li>NIIT Ghana(Routing & Switching) Certified</li>
-      <li>Certified DevOps CeeyIT Solutions</li>
+      <li>NIIT Ghana (Routing & Switching) Certified</li>
+      <li>Certified DevOps - CeeyIT Solutions</li>
     </ul>
 
     <h2>Projects</h2>
     <ul>
-      <li><strong>CI/CD Pipeline:</strong> Automated Dockerized app deployments using Jenkins and GitHub Webhooks </li>
-      <li><strong>Cloud Architecture:</strong> Designing scalable, secure, and cost-effective cloud solutions -
-         AWS infrastructure provisioning and optimization</li>
-      <li><strong>Networking:</strong> Configuring and managing network devices -
-        Ensuring reliable and secure network connectivity</li>
-      <li><strong>IT Management:</strong> Leading IT operations and strategic planning -
-        Managing cross-functional teams and projects </li>
+      <li><strong>CI/CD Pipeline:</strong> Automated Dockerized app deployments using Jenkins and GitHub Webhooks</li>
+      <li><strong>Cloud Architecture:</strong> Designing scalable, secure, and cost-effective cloud solutions - AWS infrastructure provisioning and optimization</li>
+      <li><strong>Networking:</strong> Configuring and managing network devices - Ensuring reliable and secure network connectivity</li>
+      <li><strong>IT Management:</strong> Leading IT operations and strategic planning - Managing cross-functional teams and projects</li>
     </ul>
 
     <h2>Contact</h2>
